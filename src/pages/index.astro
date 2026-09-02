@@ -1,11 +1,51 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Counter from '../components/Counter.tsx';
 ---
 
-<Layout title="LeadVenture">
-	<main class="flex min-h-screen flex-col items-center justify-center gap-6">
-		<h1 class="text-3xl font-bold">LeadVenture</h1>
-		<Counter client:load />
+<Layout title="Javier Oskar — Web Components">
+	<main class="min-h-screen bg-slate-950 px-6 py-10 text-slate-100 sm:px-10 lg:px-16">
+		<div class="mx-auto flex max-w-5xl flex-col gap-16">
+			<nav class="flex items-center justify-between">
+				<a class="text-lg font-semibold tracking-tight" href="/">Javier Oskar</a>
+				<span class="rounded-full border border-slate-700 px-3 py-1 text-sm text-slate-300">Disponible para colaborar</span>
+			</nav>
+
+			<section class="grid gap-10 lg:grid-cols-[1.5fr_1fr] lg:items-end">
+				<div>
+					<p class="mb-4 text-sm font-semibold uppercase tracking-[0.22em] text-cyan-300">Diseño y desarrollo web</p>
+					<h1 class="max-w-3xl text-5xl font-bold tracking-tight text-white sm:text-7xl">Interfaces claras, útiles y memorables.</h1>
+					<p class="mt-6 max-w-2xl text-lg leading-8 text-slate-300">Soy Javier Oskar. Diseño experiencias digitales y las convierto en componentes web que funcionan de verdad.</p>
+					<div class="mt-8 flex flex-wrap gap-3">
+						<a class="rounded-full bg-cyan-300 px-5 py-3 font-semibold text-slate-950 transition hover:bg-cyan-200" href="#proyectos">Ver proyectos</a>
+						<a class="rounded-full border border-slate-600 px-5 py-3 font-semibold transition hover:border-slate-300" href="mailto:hola@example.com">Escríbeme</a>
+					</div>
+				</div>
+				<div class="rounded-3xl border border-slate-800 bg-slate-900/70 p-6">
+					<p class="text-sm text-slate-400">Enfoque</p>
+					<ul class="mt-5 space-y-4 text-lg">
+						<li class="flex gap-3"><span class="text-cyan-300">01</span> Sistemas de diseño</li>
+						<li class="flex gap-3"><span class="text-cyan-300">02</span> Componentes reutilizables</li>
+						<li class="flex gap-3"><span class="text-cyan-300">03</span> Experiencias accesibles</li>
+					</ul>
+				</div>
+			</section>
+
+			<section id="proyectos" class="border-t border-slate-800 pt-10">
+				<div class="mb-6 flex items-baseline justify-between gap-4">
+					<h2 class="text-2xl font-bold text-white">Proyectos seleccionados</h2>
+					<span class="text-sm text-slate-400">2026</span>
+				</div>
+				<div class="grid gap-5 md:grid-cols-3">
+					<article class="rounded-2xl bg-cyan-300 p-6 text-slate-950"><p class="text-sm font-semibold">Producto digital</p><h3 class="mt-16 text-2xl font-bold">LeadVenture</h3><p class="mt-2">Una base para equipos que convierten ideas en acción.</p></article>
+					<article class="rounded-2xl border border-slate-800 bg-slate-900 p-6"><p class="text-sm font-semibold text-cyan-300">Sistema visual</p><h3 class="mt-16 text-2xl font-bold text-white">Atlas</h3><p class="mt-2 text-slate-300">Patrones consistentes para productos complejos.</p></article>
+					<article class="rounded-2xl border border-slate-800 bg-slate-900 p-6"><p class="text-sm font-semibold text-cyan-300">Web components</p><h3 class="mt-16 text-2xl font-bold text-white">Núcleo</h3><p class="mt-2 text-slate-300">Bloques ligeros para interfaces rápidas y mantenibles.</p></article>
+				</div>
+			</section>
+
+			<footer class="flex flex-col justify-between gap-3 border-t border-slate-800 py-6 text-sm text-slate-400 sm:flex-row">
+				<span>© 2026 Javier Oskar</span>
+				<span>Hecho con intención.</span>
+			</footer>
+		</div>
 	</main>
 </Layout>
